@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#04090A" />
+  <meta name="description" content="Dias&Dantas — alvarás, licenças e regularização com atendimento consultivo em São Paulo." />
+  <title>Dias&Dantas — alvarás e licenças com suporte especializado</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgressBar" aria-hidden="true"></div>
+  <div class="scroll-globe" id="scrollGlobe" aria-hidden="true"></div>
+  <div class="bg-fx" aria-hidden="true">
+    <div class="bg-fx__grid"></div>
+    <div class="bg-fx__aurora"></div>
+    <div class="bg-fx__orb bg-fx__orb--1"></div>
+    <div class="bg-fx__orb bg-fx__orb--2"></div>
+    <div class="bg-fx__orb bg-fx__orb--3"></div>
+    <div class="bg-fx__orb bg-fx__orb--4"></div>
+    <div class="bg-fx__beam bg-fx__beam--1"></div>
+    <div class="bg-fx__beam bg-fx__beam--2"></div>
+  </div>
+  <div class="page-constellation" aria-hidden="true">
+    <canvas id="constellation"></canvas>
+  </div>
+
+  <nav class="section-rail" aria-label="Navegação por seção">
+    <a href="#inicio" data-scroll-nav data-rail-label="Início"><span class="section-rail__dot"></span><span class="section-rail__label">Início</span></a>
+    <a href="#metodo" data-scroll-nav data-rail-label="Método"><span class="section-rail__dot"></span><span class="section-rail__label">Método</span></a>
+    <a href="#servicos" data-scroll-nav data-rail-label="Serviços"><span class="section-rail__dot"></span><span class="section-rail__label">Serviços</span></a>
+    <a href="#depoimentos" data-scroll-nav data-rail-label="Resultados"><span class="section-rail__dot"></span><span class="section-rail__label">Resultados</span></a>
+    <a href="#clientes" data-scroll-nav data-rail-label="Clientes"><span class="section-rail__dot"></span><span class="section-rail__label">Clientes</span></a>
+    <a href="#quem-somos" data-scroll-nav data-rail-label="Quem Somos"><span class="section-rail__dot"></span><span class="section-rail__label">Quem Somos</span></a>
+    <a href="#faq" data-scroll-nav data-rail-label="FAQ"><span class="section-rail__dot"></span><span class="section-rail__label">FAQ</span></a>
+    <a href="#contato" data-scroll-nav data-rail-label="Contato"><span class="section-rail__dot"></span><span class="section-rail__label">Contato</span></a>
+  </nav>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="#top" class="brand" aria-label="Início">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">Dias&amp;Dantas</span>
+      </a>
+      <button id="navToggle" class="nav-toggle" aria-controls="siteMenu" aria-expanded="false" aria-label="Abrir menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/>
+        </svg>
+      </button>
+      <nav id="siteMenu" class="nav" aria-label="Navegação principal">
+        <a href="#metodo" data-scroll-nav>Método</a>
+        <a href="#servicos" data-scroll-nav>Serviços</a>
+        <a href="#depoimentos" data-scroll-nav>Resultados</a>
+        <a href="#clientes" data-scroll-nav>Clientes</a>
+        <a href="#quem-somos" data-scroll-nav>Quem Somos</a>
+        <a href="#faq" data-scroll-nav>FAQ</a>
+        <a href="#contato" data-scroll-nav>Contato</a>
+        <a href="#contato" class="btn btn--primary">Quero mais informações</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="inicio" data-scroll-scene>
+      <div class="container hero__content">
+        <span class="eyebrow" data-reveal>Não se preocupe — consultoria especializada</span>
+        <h1 data-reveal data-reveal-delay="1">
+          Tenha uma estrutura feita <span class="accent">sob medida</span> para atender seu negócio
+        </h1>
+        <p class="lead" data-reveal data-reveal-delay="2">
+          Cansado de estresse na hora de obter o alvará de funcionamento? Na Dias&amp;Dantas você avança rumo à licença de funcionamento em conformidade com a Vigilância Sanitária.
+          Conte conosco para agilizar o processo e orientar as principais áreas do seu negócio — inclusive MEI, quando for o caso.
+        </p>
+        <p class="lead lead--secondary" data-reveal data-reveal-delay="2">
+          Saiba como conseguir sua Licença de Funcionamento e seu Alvará de Funcionamento de forma organizada, com atendimento direcionado ao seu cenário.
+        </p>
+        <div class="hero__cta" data-reveal data-reveal-delay="3">
+          <a href="#contato" class="btn btn--primary btn--lg">Quero mais informações »</a>
+          <a href="#servicos" class="btn btn--ghost btn--lg">Role para explorar</a>
+        </div>
+        <div class="hero__support" data-reveal data-reveal-delay="3">
+          <span>Atendimento consultivo com especialista</span>
+          <span>Experiência guiada</span>
+          <span>Role para explorar</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" data-scroll-scene>
+      <div class="container">
+        <div class="services">
+          <article class="service" data-reveal data-tilt>
+            <div class="service__icon" aria-hidden="true">📜</div>
+            <h3>Certificado de Vigilância Sanitária</h3>
+            <p>Adequamos seu estabelecimento às normas do estado de São Paulo e aos cuidados sanitários da ANVISA e Secretaria de Saúde.</p>
+          </article>
+          <article class="service" data-reveal data-reveal-delay="1" data-tilt>
+            <div class="service__icon" aria-hidden="true">🏢</div>
+            <h3>Alvará de Funcionamento</h3>
+            <p>Licença e alvará para exercer a atividade com segurança documental — inclusive para empresas enquadradas como MEI.</p>
+          </article>
+          <article class="service" data-reveal data-reveal-delay="2" data-tilt>
+            <div class="service__icon" aria-hidden="true">🚒</div>
+            <h3>Corpo de Bombeiros</h3>
+            <p>AVCB emitido pelo CBPMESP, certificando as condições de segurança contra incêndio na vistoria.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" data-scroll-scene>
+      <div class="container contact">
+        <div class="contact__info" data-reveal>
+          <span class="eyebrow">Próximo passo</span>
+          <h2 class="mt-12">Preencha o formulário ou receba uma ligação</h2>
+          <p>Conte o básico do seu caso. Retornamos com próximos passos e orçamento.</p>
+          <div class="services services--compact">
+            <article class="service">
+              <div class="service__icon" aria-hidden="true">📄</div>
+              <h3>Preencha o formulário</h3>
+              <p>Conte o básico do seu caso. Retornamos com próximos passos e orçamento.</p>
+            </article>
+            <article class="service">
+              <div class="service__icon" aria-hidden="true">📞</div>
+              <h3>Receba uma ligação</h3>
+              <p>Se preferir, alinhamos tudo por telefone com clareza e sem pressa.</p>
+            </article>
+          </div>
+        </div>
+        <form id="leadForm" class="card-form" data-reveal data-reveal-delay="1" novalidate>
+          <h3>Receber mais informações</h3>
+          <p class="sub">Preencha abaixo e redirecionaremos para o WhatsApp.</p>
+          <div class="field field--floating"><input id="nome" name="nome" type="text" placeholder=" " required /><label for="nome">Nome e sobrenome</label></div>
+          <div class="field field--floating"><input id="email" name="email" type="email" placeholder=" " required /><label for="email">E-mail corporativo</label></div>
+          <div class="field field--floating"><input id="empresa" name="empresa" type="text" placeholder=" " /><label for="empresa">Empresa (opcional)</label></div>
+          <div class="field field--floating"><input id="telefone" name="telefone" type="tel" placeholder=" " required /><label for="telefone">WhatsApp / telefone</label></div>
+          <div class="field field--floating">
+            <select id="faturamento" name="faturamento">
+              <option value=""></option>
+              <option>Até R$ 30 mil</option>
+              <option>R$ 30 mil a R$ 100 mil</option>
+              <option>R$ 100 mil a R$ 500 mil</option>
+              <option>Acima de R$ 500 mil</option>
+            </select>
+            <label for="faturamento">Faturamento mensal (opcional)</label>
+          </div>
+          <button id="submitBtn" type="submit" class="submit-btn">Receber mais informações</button>
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="alt" data-scroll-scene>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Resultados rápidos que você entende</span>
+          <h2>Métricas e entregas reais — com caminho técnico claro</h2>
+        </div>
+      </div>
+      <div class="container metrics" data-reveal>
+        <div class="metrics__inner">
+          <div class="metric"><div class="metric__value" data-counter data-target="160000" data-format="currency-full">R$ 0,00</div><div class="metric__label">R$ 160.000,00 em demandas agilizadas · Indústria &amp; serviços</div></div>
+          <div class="metric"><div class="metric__value" data-counter data-target="42" data-suffix=" dias">0</div><div class="metric__label">42 dias — prazo médio de etapa crítica · Varejo multiunidade</div></div>
+          <div class="metric"><div class="metric__value" data-counter data-target="98" data-suffix="%">0</div><div class="metric__label">98% sem retrabalho documental · Saúde &amp; educação</div></div>
+          <div class="metric"><div class="metric__value" data-counter data-target="1200000" data-format="currency-full" data-prefix="+">R$ 0,00</div><div class="metric__label">+R$ 1,2M acompanhados em processos · Histórico do escritório</div></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="services services--quad">
+          <article class="service" data-reveal><div class="service__icon" aria-hidden="true">👥</div><h3>+800</h3><p>Clientes</p></article>
+          <article class="service" data-reveal data-reveal-delay="1"><div class="service__icon" aria-hidden="true">📋</div><h3>+2.000</h3><p>Alvarás de Vigilância Sanitária emitidos</p></article>
+          <article class="service" data-reveal data-reveal-delay="2"><div class="service__icon" aria-hidden="true">🏅</div><h3>+5.300</h3><p>Alvarás de funcionamento emitidos</p></article>
+          <article class="service" data-reveal><div class="service__icon" aria-hidden="true">🎯</div><h3>+1.200</h3><p>Dedetizações realizadas</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="metodo" data-scroll-scene>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Este é o método em ação</span>
+          <h2>Fluxo simples para reduzir risco, ganhar previsibilidade e manter sua operação dentro da lei</h2>
+        </div>
+        <div class="accordion" id="valueAccordion" data-reveal>
+          <div class="accordion__item is-open"><button class="accordion__trigger" aria-expanded="true">A · Atração</button><div class="accordion__panel">Diagnóstico, viabilidade e priorização do que bloqueia abertura, ampliação ou renovação.</div></div>
+          <div class="accordion__item"><button class="accordion__trigger" aria-expanded="false">P · Posicionamento</button><div class="accordion__panel" hidden>Organização documental e alinhamento com órgãos — comunicação clara em cada etapa.</div></div>
+          <div class="accordion__item"><button class="accordion__trigger" aria-expanded="false">C · Conversão</button><div class="accordion__panel" hidden>Entrega de licenças e alvarás com checklist para você focar no crescimento.</div></div>
+        </div>
+        <article class="service service--highlight mt-20" data-reveal>
+          <h3>Chega de transtorno!!!</h3>
+          <p>Abrir ou manter empresa não é fácil — mas você não precisa da burocracia sozinho. A Dias&amp;Dantas ajuda a garantir a legalidade do negócio, com licenças e alvarás de funcionamento em dia em São Paulo e região, incluindo exigências da vigilância sanitária e demais órgãos.</p>
+          <p>Invista na regularização hoje para evitar multas, interdições e perda de oportunidades. Fale conosco e receba um plano claro para o seu caso.</p>
+          <a href="#contato" class="btn btn--primary mt-20">Quero mais informações »</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="servicos" class="alt" data-scroll-scene>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Soluções sob medida para o sucesso da sua empresa</span>
+          <h2>Serviços para cada fase do licenciamento e da regularização</h2>
+        </div>
+        <div class="services">
+          <article class="service" data-reveal data-tilt><div class="service__icon" aria-hidden="true">🛡️</div><h3>Vigilância Sanitária</h3><p>Protocolos e planos para licença de funcionamento e conformidade com exigências sanitárias.</p></article>
+          <article class="service" data-reveal data-reveal-delay="1" data-tilt><div class="service__icon" aria-hidden="true">📜</div><h3>Alvará de Funcionamento</h3><p>Acompanhamento para emissão e renovação junto ao município, conforme o porte da atividade.</p></article>
+          <article class="service" data-reveal data-reveal-delay="2" data-tilt><div class="service__icon" aria-hidden="true">🔥</div><h3>Corpo de Bombeiros</h3><p>APPCI e documentação junto ao Corpo de Bombeiros, conforme projeto e edificação.</p></article>
+          <article class="service" data-reveal data-tilt><div class="service__icon" aria-hidden="true">♻️</div><h3>CETESB (CA)</h3><p>Licenças ambientais de instalação e operação junto à Companhia Ambiental do Estado de São Paulo.</p></article>
+          <article class="service" data-reveal data-reveal-delay="1" data-tilt><div class="service__icon" aria-hidden="true">⚙️</div><h3>PPRA (NR-9)</h3><p>Programa de Prevenção de Riscos Ambientais para ambientes industriais e administrativos.</p></article>
+          <article class="service" data-reveal data-reveal-delay="2" data-tilt><div class="service__icon" aria-hidden="true">📋</div><h3>P.O.P</h3><p>Procedimento Operacional Padrão para padronizar tarefas e reduzir desvios operacionais.</p></article>
+          <article class="service" data-reveal data-tilt><div class="service__icon" aria-hidden="true">🐜</div><h3>Dedetização</h3><p>Controle de pragas urbanas com orientação documental quando exigido pelo segmento.</p></article>
+          <article class="service" data-reveal data-reveal-delay="1" data-tilt><div class="service__icon" aria-hidden="true">🏥</div><h3>PGRSS</h3><p>Plano de Gerenciamento de Resíduos de Serviços de Saúde — conforme resoluções aplicáveis.</p></article>
+        </div>
+        <div class="hero__cta mt-20" data-reveal><a href="#contato" class="btn btn--primary">Quero mais informações »</a></div>
+      </div>
+    </section>
+
+    <section id="depoimentos" data-scroll-scene>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Resultados que falam por si</span>
+          <h2>+R$ 1,2M gerenciados em processos · +100 empresas apoiadas</h2>
+        </div>
+        <div class="section-head" data-reveal>
+          <h2>Por que escolher a Dias&amp;Dantas?</h2>
+          <p>Aqui você encontra suporte para alvará de funcionamento e licença de funcionamento, com profissionais experientes em todas as etapas. Atuamos com qualidade e agilidade para pequeno, médio e grande porte.</p>
+          <p>A forma mais eficaz de conquistar seu Alvará de Funcionamento e sua Licença de Funcionamento é com um time que empurra o processo até a conclusão — com transparência de prazos e custos.</p>
+        </div>
+
+        <div class="slider-wrap" data-reveal>
+          <div class="section-head"><h2>Depoimentos reais de nossos clientes</h2></div>
+          <div class="iphone-slider" id="iphoneSlider">
+            <div class="iphone-shell" aria-hidden="true"><span class="iphone-notch"></span></div>
+            <div class="iphone-screen">
+              <article class="testimonial-slide is-active"><p class="testimonial-bubble">Conseguimos o alvará antes do combinado. Processo transparente do começo ao fim.</p><p class="testimonial-author">Cliente — Indústria</p></article>
+              <article class="testimonial-slide"><p class="testimonial-bubble">Entendemos o que faltava na vigilância. Checklist e acompanhamento fizeram a diferença.</p><p class="testimonial-author">Cliente — Saúde</p></article>
+              <article class="testimonial-slide"><p class="testimonial-bubble">A parte ambiental era um nó. Hoje temos licença em dia e zero surpresa em fiscalização.</p><p class="testimonial-author">Cliente — Logística</p></article>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button type="button" data-slider-prev aria-label="Depoimento anterior"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+            <button type="button" data-slider-next aria-label="Próximo depoimento"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+          </div>
+          <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Navegação de depoimentos"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="clientes" class="alt" data-scroll-scene>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2>Nossos clientes</h2>
+          <p>Alguns dos parceiros que já confiaram na Dias&amp;Dantas.</p>
+        </div>
+        <div class="clients-strip" aria-label="Nossos clientes">
+          <div class="clients-strip__track">
+            <span class="client-chip" data-initial="F"><span class="client-chip__mark">F</span><span class="client-chip__name">Frans Café</span></span>
+            <span class="client-chip" data-initial="F"><span class="client-chip__mark">F</span><span class="client-chip__name">Fotótica</span></span>
+            <span class="client-chip" data-initial="V"><span class="client-chip__mark">V</span><span class="client-chip__name">Viena</span></span>
+            <span class="client-chip" data-initial="A"><span class="client-chip__mark">A</span><span class="client-chip__name">Alfa Foods</span></span>
+            <span class="client-chip" data-initial="N"><span class="client-chip__mark">N</span><span class="client-chip__name">Nova Farma</span></span>
+            <span class="client-chip" data-initial="F"><span class="client-chip__mark">F</span><span class="client-chip__name">Frans Café</span></span>
+            <span class="client-chip" data-initial="F"><span class="client-chip__mark">F</span><span class="client-chip__name">Fotótica</span></span>
+            <span class="client-chip" data-initial="V"><span class="client-chip__mark">V</span><span class="client-chip__name">Viena</span></span>
+            <span class="client-chip" data-initial="A"><span class="client-chip__mark">A</span><span class="client-chip__name">Alfa Foods</span></span>
+            <span class="client-chip" data-initial="N"><span class="client-chip__mark">N</span><span class="client-chip__name">Nova Farma</span></span>
+            <span class="client-chip" data-initial="F" aria-hidden="true"><span class="client-chip__mark">F</span><span class="client-chip__name">Frans Café</span></span>
+            <span class="client-chip" data-initial="F" aria-hidden="true"><span class="client-chip__mark">F</span><span class="client-chip__name">Fotótica</span></span>
+            <span class="client-chip" data-initial="V" aria-hidden="true"><span class="client-chip__mark">V</span><span class="client-chip__name">Viena</span></span>
+            <span class="client-chip" data-initial="A" aria-hidden="true"><span class="client-chip__mark">A</span><span class="client-chip__name">Alfa Foods</span></span>
+            <span class="client-chip" data-initial="N" aria-hidden="true"><span class="client-chip__mark">N</span><span class="client-chip__name">Nova Farma</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quem-somos" class="about-section" data-scroll-scene>
+      <div class="container about">
+        <div class="about__intro" data-reveal>
+          <span class="eyebrow">Quem Somos</span>
+          <h2 class="about__title">Consultoria que <span class="accent">simplifica regularização</span> desde 2017</h2>
+          <p class="about__lead">A Dias&amp;Dantas apoia empresas em São Paulo com alvarás, licenças e adequações aos órgãos reguladores — para você focar no negócio, sem se preocupar com cada exigência sozinho.</p>
+          <p class="about__lead">Acompanhamos alvará de funcionamento, vigilância sanitária, bombeiros, meio ambiente e documentação complementar, com transparência total de prazos e custos.</p>
+          <ul class="about__stats" aria-label="Números da Dias e Dantas">
+            <li><strong>9 anos</strong><span>de mercado em SP</span></li>
+            <li><strong>+800</strong><span>clientes atendidos</span></li>
+            <li><strong>+5.300</strong><span>alvarás emitidos</span></li>
+          </ul>
+        </div>
+
+        <div class="about__pillars" data-reveal data-reveal-delay="1">
+          <article class="pillar">
+            <span class="pillar__num">01</span>
+            <div class="pillar__body">
+              <h3>Nossa missão real</h3>
+              <p>Tornar a regularização previsível, com comunicação honesta e execução técnica impecável em cada protocolo.</p>
+            </div>
+          </article>
+          <article class="pillar">
+            <span class="pillar__num">02</span>
+            <div class="pillar__body">
+              <h3>Planejamento de elite</h3>
+              <p>Mapeamento de exigências, ordem de protocolos e prazos para você saber o que acontece em cada etapa.</p>
+            </div>
+          </article>
+          <article class="pillar">
+            <span class="pillar__num">03</span>
+            <div class="pillar__body">
+              <h3>Gestão ativa e otimização</h3>
+              <p>Acompanhamos o andamento junto aos órgãos e ajustamos o plano conforme novas demandas surgem.</p>
+            </div>
+          </article>
+          <article class="pillar">
+            <span class="pillar__num">04</span>
+            <div class="pillar__body">
+              <h3>Transparência radical</h3>
+              <p>Comunicação direta sobre custos, riscos e avanços — sem promessas vagas ou surpresas no meio do caminho.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="alt" data-scroll-scene>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2>Você sabe qual a importância de ter alvarás de funcionamento para o seu negócio?</h2>
+          <p>A Dias&amp;Dantas apoia sua empresa na Licença de Funcionamento — Vigilância Sanitária e no Alvará de Funcionamento. Sem esses documentos, há risco de multas, interdição e danos à imagem.</p>
+          <p>Com tudo regularizado, fica mais fácil obter crédito, parcerias e contratos. Veja prós e contras:</p>
+        </div>
+        <div class="services services--duo">
+          <article class="service" data-reveal><h3>Pontos positivos</h3><ul><li>Regularização e conformidade legal</li><li>Segurança para o empreendimento</li><li>Facilitação de créditos, parcerias e contratos</li><li>Acesso a benefícios e incentivos públicos</li></ul></article>
+          <article class="service" data-reveal data-reveal-delay="1"><h3>Pontos negativos</h3><ul><li>Riscos de multas e interdição</li><li>Danos à reputação e à imagem da empresa</li><li>Dificuldade para crédito e financiamentos</li><li>Perda de oportunidades</li></ul></article>
+        </div>
+        <div class="section-head mt-20" data-reveal><h2>Quais os tipos de alvará de funcionamento?</h2></div>
+        <div class="accordion" data-reveal>
+          <div class="accordion__item is-open"><button class="accordion__trigger" aria-expanded="true">Auto de Licença de Funcionamento (ALF)</button><div class="accordion__panel">Documento para exercício regular da atividade conforme exigência municipal.</div></div>
+          <div class="accordion__item"><button class="accordion__trigger" aria-expanded="false">Auto de Licença de Funcionamento Condicionado (ALF-C)</button><div class="accordion__panel" hidden>Modalidade condicionada ao atendimento progressivo de exigências técnicas.</div></div>
+          <div class="accordion__item"><button class="accordion__trigger" aria-expanded="false">Alvará de Autorização para Eventos Públicos e Temporários</button><div class="accordion__panel" hidden>Licença específica para operações temporárias e eventos.</div></div>
+        </div>
+        <div class="section-head mt-20" data-reveal><h2>Outras dúvidas frequentes</h2></div>
+        <div class="accordion" data-reveal>
+          <div class="accordion__item"><button class="accordion__trigger" aria-expanded="false">Alvará provisório x definitivo</button><div class="accordion__panel" hidden>O provisório permite iniciar operação conforme regras locais; o definitivo conclui todas as exigências.</div></div>
+          <div class="accordion__item"><button class="accordion__trigger" aria-expanded="false">Quanto tempo leva?</button><div class="accordion__panel" hidden>Depende do segmento, porte e documentação. No diagnóstico inicial já apresentamos faixa de prazo.</div></div>
+          <div class="accordion__item"><button class="accordion__trigger" aria-expanded="false">Atendem todo o Brasil?</button><div class="accordion__panel" hidden>Atendimento principal em São Paulo e região, com avaliação de demandas em outros locais.</div></div>
+        </div>
+        <article class="service service--highlight mt-20" data-reveal>
+          <h3>Pronto para colocar sua empresa em dia com segurança?</h3>
+          <p>Sua empresa em SP precisa de alvará de funcionamento? Fale com a equipe e receba um plano de ação alinhado ao seu cenário.</p>
+          <a href="#contato" class="btn btn--primary">Quero mais informações »</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Dias&amp;Dantas</h4>
+        <p>Consultoria especializada em alvarás, licenças e regularização para empresas em São Paulo e região.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <p><a href="#metodo">Método</a></p>
+        <p><a href="#servicos">Serviços</a></p>
+        <p><a href="#depoimentos">Resultados</a></p>
+        <p><a href="#faq">FAQ</a></p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <p>contato@diasedantas.com.br</p>
+        <p>+55 (11) 0000-0000</p>
+        <p>Seg. a Sex. · 9h às 18h</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Dias&amp;Dantas. Todos os direitos reservados.</span>
+      <span>Política de privacidade</span>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="script.js"></script>
+</body>
+</html>
