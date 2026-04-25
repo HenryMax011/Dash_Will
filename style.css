@@ -1021,6 +1021,7 @@ section.alt {
   display: grid;
   justify-items: center;
   gap: 24px;
+  width: 100%;
 }
 .clients-strip {
   width: min(1120px, 100%);
@@ -1124,13 +1125,15 @@ section.alt {
 }
 .iphone-slider {
   position: relative;
-  width: min(320px, 34vh, 100%);
+  width: min(320px, 34vh, 88vw, 100%);
   max-width: 100%;
   aspect-ratio: 9 / 18;
+  margin-inline: auto;
 }
 .iphone-shell {
   position: absolute;
   inset: 0;
+  z-index: 0;
   border-radius: 44px;
   background: linear-gradient(165deg, #0A1518, #03090A);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1147,6 +1150,7 @@ section.alt {
   position: absolute;
   top: 11px;
   left: 50%;
+  z-index: 2;
   transform: translateX(-50%);
   width: 120px;
   height: 24px;
@@ -1157,6 +1161,7 @@ section.alt {
 .iphone-screen {
   position: absolute;
   inset: 18px;
+  z-index: 1;
   border-radius: 30px;
   border: 1px solid var(--line-soft);
   background: linear-gradient(160deg, rgba(11, 28, 32, 0.97), rgba(6, 16, 18, 0.95));
@@ -1227,7 +1232,8 @@ section.alt {
   display: flex;
   gap: 8px;
   justify-content: center;
-  margin-top: -12px;
+  margin-top: 8px;
+  flex-wrap: wrap;
 }
 .slider-dot {
   width: 8px;
@@ -1457,7 +1463,7 @@ section.alt {
   .service { padding: 38px 34px; }
   .pillar { padding: 28px 30px; }
   .metric__value { font-size: 2.6rem; }
-  .iphone-slider { width: min(380px, 38vh, 100%); }
+  .iphone-slider { width: min(380px, 38vh, 88vw, 100%); }
 }
 @media (min-width: 2400px) {
   .container { width: min(1600px, 82%); }
@@ -1543,7 +1549,14 @@ section.alt {
   .about__title { font-size: clamp(1.8rem, 4vw, 2.4rem); }
   .about__stats { padding: 18px 20px; }
 
-  .iphone-slider { width: min(295px, 40vh, 100%); }
+  .iphone-slider { width: min(300px, 42vh, 88vw, 100%); }
+  .slider-controls { gap: 14px; margin-top: 8px; }
+  .slider-controls button {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    min-height: 46px;
+  }
 
   .clients-strip { width: 100%; }
   .clients-strip::before, .clients-strip::after { width: 70px; }
@@ -1597,7 +1610,7 @@ section.alt {
   .client-chip__name { font-size: 0.88rem; }
   .clients-strip::before, .clients-strip::after { width: 54px; }
 
-  .iphone-slider { width: min(275px, 44vh, 100%); }
+  .iphone-slider { width: min(280px, 46vh, 88vw, 100%); }
   .testimonial-slide { padding: 40px 16px 18px; }
   .testimonial-bubble { font-size: 0.86rem; }
 
@@ -1657,7 +1670,7 @@ section.alt {
   .field--floating label { font-size: 0.88rem; }
   .submit-btn { padding: 14px; font-size: 0.96rem; }
 
-  .iphone-slider { width: min(255px, 50vh, 100%); }
+  .iphone-slider { width: min(260px, 52vh, 90vw, 100%); }
   .testimonial-slide { padding: 38px 14px 14px; gap: 8px; }
   .testimonial-bubble { padding: 10px 12px; font-size: 0.82rem; }
 
